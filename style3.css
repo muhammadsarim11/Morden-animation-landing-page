@@ -1,0 +1,223 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+ 
+}
+html,body{
+    height: 100%;
+width: 100%;
+}
+
+.nav{
+    background-color: white;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.nav ul {
+    list-style: none;
+    display: flex;
+padding: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 2rem;
+    font-weight: bold;
+
+}
+
+#btn{
+    padding: 10px 10px;
+    width: 80px;
+    height: 45px;
+    border: solid 2.4px;
+    color: black;
+    background-color: #fff;
+    border-radius: 50px;
+    font-family: sans-serif;
+    font-size: 15px;
+    transition: .5s;
+}
+#btn:hover{
+    background-color: black;
+    color: white;
+    transition: .5s;
+}
+
+
+
+#main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    display: flex;
+ 
+    align-items: center;
+    justify-content: center;
+}
+#main img{
+    height: 529px;
+    position: relative;
+    z-index: 30;
+    border-radius: 10px ;
+ animation-name: hilja;
+ animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+  animation-direction: alternate; 
+ /* animation-delay: .5s;    */
+ animation-timing-function: linear;
+ animation-iteration-count: infinite;
+ transition: all ease;
+/* animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); */
+
+}
+#scrol-div{
+    position: absolute;
+    top: 20%;
+    width: 100%;
+
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#scrol-div::-webkit-scrollbar{
+    display: none;
+}
+#scrol-div h1{
+    display: inline-block;
+    font-size:150px ;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    margin-right: 30px;
+    letter-spacing: 4px;
+animation-name: scroll;
+animation-duration: 2s;    
+animation-timing-function: linear;
+
+animation-iteration-count: infinite;
+}
+
+#scrol-div2{
+    position: absolute;
+    top: 40%;
+    width: 100%;
+   z-index: 50;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#scrol-div2::-webkit-scrollbar{
+    display: none;
+}
+#scrol-div2 h1{
+    display: inline-block;
+    font-size:150px ;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    margin-right: 30px;
+    letter-spacing: 4px;
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+
+    animation-name: scroll;
+    animation-duration: 2s ;    
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    }
+
+
+#scrol-div3{
+    position: absolute;
+    top: 60%;
+    width: 100%;
+   
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+#scrol-div3::-webkit-scrollbar{
+    display: none;
+}
+#scrol-div3 h1{
+    display: inline-block;
+    font-size:150px ;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    margin-right: 30px;
+    letter-spacing: 4px;
+    
+animation-name: scroll;
+animation-duration: 2s;    
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+animation-direction: reverse;
+}
+ 
+
+
+@keyframes scroll {
+    0%{
+        transform: translateX(calc(-100% - 32px ));
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes hilja {
+    0%{
+      
+        left: 0%;
+        background-color: rgb(155, 103, 113);
+    bottom: 5%;
+    /* top: 0%; */
+        
+    }
+    25%{
+bottom: 0%;
+
+
+
+
+    }
+   
+
+50%{
+    
+        left: 5%;
+        background-color: crimson;
+      
+    
+
+    }
+    
+
+75% {
+
+
+   left:  -4%;
+   bottom: 3%;
+   transition: ease-in-out;
+/* bottom: 5%; */
+
+    background-color: aquamarine;
+    
+}
+
+
+100%{
+    /* left: 0%; */
+
+    left: -3%;
+    bottom: 5%;
+}
+
+
